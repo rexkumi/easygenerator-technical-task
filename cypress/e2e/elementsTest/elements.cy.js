@@ -137,6 +137,7 @@ describe('Easygenerator page element tests', () => {
 					practicePage.getAlertButton().click();
 					//simulates submitting a confirmation
 					cy.on('window:confirm', () => true);
+					practicePage.getNameField().should('have.value', '');
 				}
 			);
 		});
