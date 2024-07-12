@@ -1,0 +1,6 @@
+{
+  "statusCode": 301,
+  "headers": {
+    "location": "http://localhost:8080/"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "easygenerator-technical-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "http-server -p 8080 .",
+    "cypress:run:interactive": "npx cypress open",
+    "cypress:run:tests": "concurrently npm:cypress:run:headless:*",
+    "cypress:run:headless:edge": "npx cypress run --browser edge",
+    "cypress:run:headless:chrome": "npx cypress run --browser chrome",
+    "cypress:run:headless:firefox": "npx cypress run --browser firefox"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cypress": "^13.13.0",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "http-server": "^14.1.1",
+    "prettier": "^3.3.2"
+  }
+}
