@@ -14,6 +14,8 @@ module.exports = defineConfig({
 	env: {
 		HOME_REDIRECT_URL: 'https://www.easygenerator.com/',
 		ALERT_TEXT_PATH: 'cypress/fixtures/files/alert-text.txt',
+		APPLICATION_PATH: 'task.html',
+		IFRAME_SOURCE: 'https://easygenerator.com/',
 	},
 	e2e: {
 		setupNodeEvents(on, config) {

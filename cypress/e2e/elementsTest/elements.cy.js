@@ -8,7 +8,7 @@ const practicePage = new PracticePage();
 
 describe('Easygenerator page element tests', () => {
 	beforeEach(() => {
-		cy.visit('/task.html');
+		cy.visit(Cypress.config('baseUrl') + Cypress.env('APPLICATION_PATH'));
 	});
 
 	context('Header elements', () => {
@@ -212,7 +212,11 @@ describe('Easygenerator page element tests', () => {
 
 	context('iframe element', () => {
 		it('loads the iframe as expected', () => {
-			practicePage.getIframe().should('be.visible');
+			practicePage
+				.getIframe()
+				.should('be.visible')
+				//ensures the iframe is loaded from the expected source
+				.should('have.attr', 'src', Cypress.env('IFRAME_SOURCE'));
 		});
 	});
 
