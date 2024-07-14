@@ -5,6 +5,10 @@ HOME_REDIRECT_URL
 
 ALERT_TEXT_PATH
 
+APPLICATION_PATH
+
+IFRAME_SOURCE
+
 ### Running the suite
 
 To install all required packages locally run the following:
